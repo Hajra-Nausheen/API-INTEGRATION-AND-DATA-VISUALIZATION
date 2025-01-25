@@ -1,0 +1,50 @@
+import requests
+import matplotlib.pyplot as plt
+
+# Function to fetch data from the API
+def fetch_weather_data(city, api_key):
+    base_url = "https://api.openweathermap.org/data/2.5/forecast"
+    params = {
+        "q": city,
+        "appid": api_key,
+        "units": "metric"  
+    }
+    response = requests.get(base_url, params=params)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        print(f"Error: {response.status_code} - {response.text}")
+        return None
+
+# Function to extract and visualize the data
+def visualize_weather_data(data):
+    if not data:
+        print("No data available for visualization.")
+        return
+
+    # Extract timestamps and temperatures
+    Timestamps = [item["dt_txt"] for item in data["list"]]
+    temperatures = [item["main"]["temp"] for item in data["list"]]
+
+    # Plot the data
+    plt.figure(figsize=(12, 6))
+    plt.plot(Timestamps, temperatures, marker='o', color='g', label="Temperature (°C)")
+    plt.xticks(rotation=45, fontsize=8)
+    plt.title(f"4-Day Weather Forecast for {data['city']['name']}", fontsize=20)
+    plt.xlabel("Timestamps", fontsize=15)
+    plt.ylabel("Temperature (°C)", fontsize=15)
+    plt.legend()
+    plt.grid(True)
+    plt.tight_layout()
+    plt.show()
+
+# Main code
+if __name__ == "__main__":
+    # Replace with your API key and desired city
+    API_KEY = "838e6ef8a578ca141f75d6b6e52a8fad"
+    CITY = "oxford"
+
+    # Fetch data and visualize
+    weather_data = fetch_weather_data(CITY, API_KEY)
+    visualize_weather_data(weather_data)
+    
