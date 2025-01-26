@@ -17,7 +17,9 @@
     
 * Using VS Code and Python for API Data Integration and Visualization
       Visual Studio Code (VS Code) is a widely used, lightweight code editor that provides powerful features for API data integration and visualization when working with Python. Below is a step-by-step explanation:
-    I have used some libraries of python programming language in VS Code for API Data Integration and Visualization such as:
+  
+   * I have used some libraries of python programming language in VS Code for API Data Integration and Visualization such as:
+  
        1. requests library ( I have use requests library for API Data Integration)
       
        2. matplotib library ( I have used matplotib library for data visualization(to create charts and graphs))
