@@ -36,7 +36,5 @@
 
     API data integration and visualization not only help in understanding and interpreting complex datasets but also enhance decision-making by providing actionable insights. This process is widely used in domains such as finance, healthcare, and IoT, where data-driven solutions are imperative.
 
-#OUTPUT
 
-![Image](https://github.com/user-attachments/assets/8c53ceb3-96f5-4723-9329-4f3da07c6e1f)
 
