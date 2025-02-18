@@ -12,7 +12,7 @@
 
 *MENTOR*    : NEELA SANTHOSH KUMAR
 
-**API INTEGRATION AND DATA VISUALIZATION**
+#API INTEGRATION AND DATA VISUALIZATION
     API data integration and visualization is a crucial process in modern software development, aimed at retrieving, processing, and presenting data from APIs (Application Programming Interfaces) in a user-friendly and insightful manner. This task involves multiple steps, each playing a vital role in ensuring the successful delivery of the solution.
     
 * Using VS Code and Python for API Data Integration and Visualization
